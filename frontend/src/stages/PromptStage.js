@@ -44,7 +44,7 @@ class PromptStage extends Component {
     this.setState({
       days
     }, () => {
-      this.props.query();
+      this.props.query(this.state);
     })
   }
 
@@ -80,6 +80,7 @@ class PromptStage extends Component {
         );
         break;
       default:
+          console.log(this.state);
           stuff = (<div onClick={this.props.query} >BLANK ERROR</div>);
     }
     return (

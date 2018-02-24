@@ -44,7 +44,6 @@ class RacePicker extends Component {
   } 
 
   submitRaces() {
-    console.log(this.state.races);
     this.props.submitRaces(this.state.races);
   }
 

@@ -41,7 +41,6 @@ class GenderPicker extends Component {
   } 
 
   submitGenders() {
-    console.log(this.state.genders);
     this.props.submitGenders(this.state.genders);
   }
 

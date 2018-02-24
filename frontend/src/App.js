@@ -33,7 +33,8 @@ class App extends Component {
     })
   }
 
-  fakeQueryServer() {
+  fakeQueryServer(state) {
+    console.log(JSON.stringify(state));
     this.setState({
       map: true
     });

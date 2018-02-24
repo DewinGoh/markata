@@ -49,7 +49,6 @@ class AgePicker extends Component {
   } 
 
   submitAges() {
-    console.log(this.state.ages);
     this.props.submitAges(this.state.ages);
   }
 
