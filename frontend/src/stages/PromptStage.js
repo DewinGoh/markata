@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AgePicker from './promptComponents/AgePicker';
+import GenderPicker from './promptComponents/GenderPicker';
 import RacePicker from './promptComponents/RacePicker';
 
 class PromptStage extends Component {
@@ -13,6 +14,7 @@ class PromptStage extends Component {
       curr: 0
     }
     this.submitAges = this.submitAges.bind(this);
+    this.submitGenders = this.submitGenders.bind(this);
     this.submitRaces = this.submitRaces.bind(this);
   }
 
@@ -23,16 +25,16 @@ class PromptStage extends Component {
     });
   }
 
-  submitRaces(races) {
+  submitGenders(genders) {
     this.setState({
-      races,
+      genders,
       curr: this.state.curr + 1
     });
   }
 
-  submitGenders(genders) {
+  submitRaces(races) {
     this.setState({
-      genders,
+      races,
       curr: this.state.curr + 1
     });
   }
@@ -58,6 +60,13 @@ class PromptStage extends Component {
       case 1:
         stuff = (
           <div>
+            <GenderPicker submitGenders={this.submitGenders} />
+          </div>
+        );
+        break;
+      case 2:
+        stuff = (
+          <div>
             <RacePicker submitRaces={this.submitRaces} />
           </div>
         );
@@ -67,7 +76,7 @@ class PromptStage extends Component {
     }
     return (
       <div>
-        ages: {JSON.stringify(this.state.ages)} <br /><br />
+        ages: {JSON.stringify(this.state)} <br /><br />
         {stuff}
       </div>
     );
