@@ -64,13 +64,6 @@ html {
   height: 60vh;
 }
 
-/* Subzone */
-
-.sub_zone{
-  text-align: left;
-  padding-left: 3px;
-}
-
 /* Itinerary */
 .iti_container {
   display: flex;
@@ -88,6 +81,11 @@ html {
   border-radius: 25px;
   color: 	#4f5e5d;
   height: 17vh;
+  transition: transform 0.4s;
+}
+
+.day_item:hover{
+  transform: translate(10px, 2px);
 }
 
 .day_item h3{
@@ -95,7 +93,14 @@ html {
   padding-left: 25px;
 }
 
+/* subzone*/
 
+.sub_zone_item{
+  text-align: left;
+  padding-left: 25px;
+  margin: 1.5%
+
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

@@ -5,7 +5,9 @@ class ItineraryView extends React.Component {
   render() {
     return (
       <div className="main_view">
-        <h1>Map View</h1>
+        <div className="iti-headers">
+        <h1>Map</h1>
+        </div>
 
         <MapRender />
       </div>

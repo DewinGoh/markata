@@ -41,8 +41,8 @@ class DayPicker extends React.Component {
             <Calendar onChange={this.changeFirst} value={this.state.first}/>
             <Calendar onChange={this.changeSecond} value={this.state.second}/>
             <Calendar onChange={this.changeThird} value={this.state.third}/>
-            <button onClick={this.submitDays}>Submit!</button>
           </div>
+          <button onClick={this.submitDays}>Submit!</button>
         </div>
       </div>
     );
