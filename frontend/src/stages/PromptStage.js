@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import AgePicker from './promptComponents/AgePicker';
+import GenderPicker from './promptComponents/GenderPicker';
 import RacePicker from './promptComponents/RacePicker';
+import DayPicker from './promptComponents/DayPicker';
 
 class PromptStage extends Component {
   constructor(props) {
@@ -10,22 +12,16 @@ class PromptStage extends Component {
       genders: [],
       races: [],
       days: [],
-      curr: 1
+      curr: 0
     }
     this.submitAges = this.submitAges.bind(this);
+    this.submitGenders = this.submitGenders.bind(this);
     this.submitRaces = this.submitRaces.bind(this);
   }
 
   submitAges(ages) {
     this.setState({
       ages,
-      curr: this.state.curr + 1
-    });
-  }
-
-  submitRaces(races) {
-    this.setState({
-      races,
       curr: this.state.curr + 1
     });
   }
@@ -37,7 +33,14 @@ class PromptStage extends Component {
     });
   }
 
-  submitDays(days) {
+  submitRaces(races) {
+    this.setState({
+      races,
+      curr: this.state.curr + 1
+    });
+  }
+
+  submitDays = (days) => {
     this.setState({
       days
     }, () => {
@@ -58,7 +61,21 @@ class PromptStage extends Component {
       case 1:
         stuff = (
           <div>
+            <GenderPicker submitGenders={this.submitGenders} />
+          </div>
+        );
+        break;
+      case 2:
+        stuff = (
+          <div>
             <RacePicker submitRaces={this.submitRaces} />
+          </div>
+        );
+        break;
+      case 3:
+        stuff = (
+          <div>
+            <DayPicker submitDays={this.submitDays} />
           </div>
         );
         break;
@@ -67,7 +84,7 @@ class PromptStage extends Component {
     }
     return (
       <div>
-        ages: {JSON.stringify(this.state.ages)} <br /><br />
+        data: {JSON.stringify(this.state)} <br /><br />
         {stuff}
       </div>
     );

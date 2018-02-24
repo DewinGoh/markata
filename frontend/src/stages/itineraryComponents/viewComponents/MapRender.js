@@ -12,11 +12,12 @@ export default class MapRender extends Component {
     const position = [this.state.lat, this.state.lng]
     return (
       <div>
+        &nbsp;
         <Iframe
-          width="100%"
-          height="100%"
+          width="45%"
+          height="70%"
           frameborder="0" style="border:0"
-          url="https://www.google.com/maps/embed/v1/q=kml">
+          url="https://www.google.com/maps/embed/v1/place?key=AIzaSyBzxguAx8aUwvmusIHakt2rgKEJx98l4yY&q=SMU+Labs,+Singapore">
         </Iframe>
       </div>
     )

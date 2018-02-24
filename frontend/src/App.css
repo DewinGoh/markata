@@ -46,6 +46,22 @@ html {
   align-items: stretch;
 }
 
+.cal_container {
+  display: flex;
+  padding-top: 2%;
+  flex-direction: row;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.outer {
+  text-align: center;
+}
+
+.inner {
+  display: inline-block;
+}
+
 .main_view {
   width: 48%;
   height: 90%;
