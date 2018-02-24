@@ -4,7 +4,7 @@ class SubzoneItem extends React.Component {
   render() {
     return (
       <div className='sub_zone_item'>
-        Cityhall
+        {this.props.subzone} | Count: {this.props.pop} | <button onClick={this.props.setMap}>View</button>
       </div>
     );
   }

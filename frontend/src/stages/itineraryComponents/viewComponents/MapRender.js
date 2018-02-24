@@ -17,8 +17,8 @@ export default class MapRender extends Component {
           width="45%"
           height="70%"
           frameborder="0" style="border:0"
-          url="https://www.google.com/maps/embed/v1/place?key=AIzaSyBzxguAx8aUwvmusIHakt2rgKEJx98l4yY&q=SMU+Labs,+Singapore">
-        </Iframe>
+          url={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBzxguAx8aUwvmusIHakt2rgKEJx98l4yY&q=${this.props.map},+Singapore`} 
+        />
       </div>
     )
   }

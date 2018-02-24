@@ -9,7 +9,7 @@ class ItineraryView extends React.Component {
         <h1>Map</h1>
         </div>
 
-        <MapRender />
+        <MapRender map={this.props.map} />
       </div>
     );
   }
