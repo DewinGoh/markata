@@ -3,8 +3,8 @@ import React from 'react';
 class SubzoneItem extends React.Component {
   render() {
     return (
-      <div>
-        subzone!
+      <div className='sub_zone_item'>
+        Cityhall
       </div>
     );
   }

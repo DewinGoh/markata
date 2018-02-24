@@ -5,10 +5,12 @@ class DayItem extends React.Component {
   render() {
     return (
       <div className='day_item'>
+        <div className="iti-headers">
         <h3>Date</h3>
-        <SubzoneItem />
-        <SubzoneItem />
-        <SubzoneItem />
+        </div>
+        <SubzoneItem/>
+        <SubzoneItem/>
+        <SubzoneItem/>
       </div>
     );
   }
