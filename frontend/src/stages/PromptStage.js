@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AgePicker from './promptComponents/AgePicker';
 import GenderPicker from './promptComponents/GenderPicker';
 import RacePicker from './promptComponents/RacePicker';
+import DayPicker from './promptComponents/DayPicker';
 
 class PromptStage extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class PromptStage extends Component {
     });
   }
 
-  submitDays(days) {
+  submitDays = (days) => {
     this.setState({
       days
     }, () => {
@@ -68,6 +69,13 @@ class PromptStage extends Component {
         stuff = (
           <div>
             <RacePicker submitRaces={this.submitRaces} />
+          </div>
+        );
+        break;
+      case 3:
+        stuff = (
+          <div>
+            <DayPicker submitDays={this.submitDays} />
           </div>
         );
         break;

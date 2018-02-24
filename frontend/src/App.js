@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import request from 'request';
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import logo from './package.png';
 import './App.css';
 
 import PromptStage from './stages/PromptStage';
