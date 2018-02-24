@@ -11,7 +11,7 @@ class PromptStage extends Component {
       genders: [],
       races: [],
       days: [],
-      curr: 1
+      curr: 0
     }
     this.submitAges = this.submitAges.bind(this);
     this.submitGenders = this.submitGenders.bind(this);
@@ -76,7 +76,7 @@ class PromptStage extends Component {
     }
     return (
       <div>
-        ages: {JSON.stringify(this.state)} <br /><br />
+        data: {JSON.stringify(this.state)} <br /><br />
         {stuff}
       </div>
     );
