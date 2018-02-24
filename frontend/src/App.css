@@ -16,9 +16,14 @@ html {
   min-height: 100vh;
   width: 100%;
   padding: 20px;
-  padding-top: 5%;
   color: white;
   position: fixed;
+}
+
+.Appbar {
+  margin: 0;
+  font-weight: bold;
+  text-align: left;
 }
 
 .App-title {
@@ -31,6 +36,28 @@ html {
 
 .content {
   padding-top: 10%;
+}
+
+.iti_container {
+  display: flex;
+  padding-top: 2%;
+  height: 100vh;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.main_view {
+  width: 48%;
+  height: 90%;
+  background-color: #444;
+  border-right: 1px solid #222;
+}
+
+.day_item {
+  background-color: #666;
+  margin: 5%;
+  padding-top: 5px;
+  padding-bottom: 20px;
 }
 
 @keyframes App-logo-spin {

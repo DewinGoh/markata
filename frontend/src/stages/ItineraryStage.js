@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AgePicker from './promptComponents/AgePicker';
-import RacePicker from './promptComponents/RacePicker';
+import ItineraryView from './itineraryComponents/ItineraryView';
+import MapView from './itineraryComponents/MapView';
 
 class PromptStage extends Component {
   constructor(props) {
@@ -16,8 +16,9 @@ class PromptStage extends Component {
 
   render() {
     return (
-      <div>
-        ages: {this.state.ages} <br /><br />
+      <div className='iti_container'>
+        <ItineraryView />
+        <MapView />
       </div>
     );
   }

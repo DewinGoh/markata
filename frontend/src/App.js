@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import PromptStage from './stages/PromptStage';
+import ItineraryStage from './stages/ItineraryStage';
 
 const serverpath = 'http://www.google.com';
 
@@ -40,7 +41,8 @@ class App extends Component {
   render() {
     const mainContent = this.state.map ? (
       <div>
-        HELLO ITINERARYSTAGE
+        <p className="Appbar">Your Markata Itinerary</p>
+        <ItineraryStage />
       </div>
     ) : (
       <div>
