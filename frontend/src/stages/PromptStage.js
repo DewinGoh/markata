@@ -10,7 +10,7 @@ class PromptStage extends Component {
       genders: [],
       races: [],
       days: [],
-      curr: 0
+      curr: 1
     }
     this.submitAges = this.submitAges.bind(this);
     this.submitRaces = this.submitRaces.bind(this);
