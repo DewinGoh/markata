@@ -13,6 +13,7 @@ class PromptStage extends Component {
       curr: 0
     }
     this.submitAges = this.submitAges.bind(this);
+    this.submitRaces = this.submitRaces.bind(this);
   }
 
   submitAges(ages) {
@@ -27,6 +28,21 @@ class PromptStage extends Component {
       races,
       curr: this.state.curr + 1
     });
+  }
+
+  submitGenders(genders) {
+    this.setState({
+      genders,
+      curr: this.state.curr + 1
+    });
+  }
+
+  submitDays(days) {
+    this.setState({
+      days
+    }, () => {
+      this.props.query();
+    })
   }
 
   render() {
@@ -47,7 +63,7 @@ class PromptStage extends Component {
         );
         break;
       default:
-          stuff = (<div>BLANK</div>);
+          stuff = (<div onClick={this.props.query} >BLANK ERROR</div>);
     }
     return (
       <div>

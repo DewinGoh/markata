@@ -4,7 +4,8 @@ class AgePicker extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      ages: [1, 2, 3]
+      ages: [1, 2, 3],
+      all: [1, 2, 3, 4, 5]
     };
     this.submitAges = this.submitAges.bind(this);
   }

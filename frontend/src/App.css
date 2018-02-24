@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -9,17 +13,24 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  min-height: 100vh;
+  width: 100%;
   padding: 20px;
+  padding-top: 5%;
   color: white;
+  position: fixed;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.content {
+  padding-top: 10%;
 }
 
 @keyframes App-logo-spin {
