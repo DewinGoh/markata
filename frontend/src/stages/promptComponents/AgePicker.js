@@ -14,22 +14,16 @@ class AgePicker extends Component {
   constructor(props) {
     super(props);
     this.state={
-      ages: [1, 2, 3],
-      all: [1, 2, 3, 4, 5]
+      ages: [false, false, false, false, false, false]
     };
     this.submitAges = this.submitAges.bind(this);
   }
 
-    componentWillMount = () => {
-    this.selectedCheckboxes = new Set();
-  }
-
-  toggleCheckbox = label => {
-    if (this.selectedCheckboxes.has(label)){
-      this.selectedCheckboxes.delete(label);
-    } else {
-      this.selectedCheckboxes.add(label);
-    }
+  toggleCheckbox = idx => {
+    const newAge = !this.state.ages[idx];
+    this.setState({
+      ages: this.state.ages.slice(0, idx).concat([newAge]).concat(this.state.ages.slice(idx+1))
+    });
   }
 
   handleFormSubmit = formSubmitEvent => {
@@ -40,34 +34,34 @@ class AgePicker extends Component {
     }
   }
 
-  createCheckbox = label => (
+  createCheckbox = (label, idx) => {
+    return (
     <Checkbox
-    label = {label}
-    handleCheckboxChange = {this.toggleCheckbox}
-    key = {label}
+      label = {label}
+      handleCheckboxChange = {() => this.toggleCheckbox(idx) }
+      key = {label}
+      checked = {this.state.ages[idx]}
     />
-  )
+  )}
 
   createCheckboxes = () => {
-    console.log(agegroups)
-    return agegroups.map(this.createCheckbox)
-  }
-  
+    return agegroups.map(this.createCheckbox);
+  } 
 
   submitAges() {
+    console.log(this.state.ages);
     this.props.submitAges(this.state.ages);
   }
 
   render() {
+    const checkBoxes = this.createCheckboxes();
     return (
       <div className = 'container'>
         <div className = 'row'>
           <div className = 'col-sm-12'>
 
             <form onSubmit = {this.handleFormSubmit}>
-              {this.createCheckboxes()}
-
-        
+              {checkBoxes}
               <button onClick={this.submitAges}>Next</button>
             </form>
           </div>
