@@ -67,7 +67,7 @@ class PromptStage extends Component {
     }
     return (
       <div>
-        ages: {this.state.ages} <br /><br />
+        ages: {JSON.stringify(this.state.ages)} <br /><br />
         {stuff}
       </div>
     );
