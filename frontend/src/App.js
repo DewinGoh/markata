@@ -42,7 +42,8 @@ class App extends Component {
   render() {
     const mainContent = this.state.map ? (
       <div>
-        <p className="Appbar">Your Markata Itinerary</p>
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className="Appbar">Your Markata Itinerary</h1>
         <ItineraryStage />
       </div>
     ) : (
@@ -50,7 +51,7 @@ class App extends Component {
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className="App-title">Markata: Make Flyers Great Again</h1>
         <div className="content">
-          <PromptStage query={this.fakeQueryServer} />
+        <PromptStage query={this.fakeQueryServer} />
         </div>
       </div>
     );
