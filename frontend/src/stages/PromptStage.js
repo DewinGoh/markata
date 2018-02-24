@@ -74,5 +74,4 @@ class PromptStage extends Component {
   }
 }
 
-
 export default PromptStage;
