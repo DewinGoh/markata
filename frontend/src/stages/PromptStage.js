@@ -42,7 +42,8 @@ class PromptStage extends Component {
 
   submitDays = (days) => {
     this.setState({
-      days
+      days,
+      curr: this.state.curr + 1
     }, () => {
       this.props.query(this.state);
     })
@@ -81,11 +82,11 @@ class PromptStage extends Component {
         break;
       default:
           console.log(this.state);
-          stuff = (<div onClick={this.props.query} >BLANK ERROR</div>);
+          stuff = (<div onClick={this.props.query} >Hold on, we're loading your results!</div>);
     }
     return (
       <div>
-        data: {JSON.stringify(this.state)} <br /><br />
+        {/* data: {JSON.stringify(this.state)} <br /><br /> */}
         {stuff}
       </div>
     );
