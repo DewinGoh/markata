@@ -77,6 +77,10 @@ html {
   height: 100%;
 }
 
+.iti-headers{
+  width: 48%;
+}
+
 
 .iti_container {
   display: flex;

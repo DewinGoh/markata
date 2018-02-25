@@ -9,14 +9,14 @@ export default class MapRender extends Component {
   }
 
   render() {
-    const position = [this.state.lat, this.state.lng]
     return (
       <div>
         &nbsp;
         <Iframe
           width="45%"
           height="70%"
-          frameborder="0" style="border:0"
+          frameborder="0" 
+          style="border:0" // eslint-disable-line react/style-prop-object
           url={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBzxguAx8aUwvmusIHakt2rgKEJx98l4yY&q=${this.props.map},+Singapore`} 
         />
       </div>
