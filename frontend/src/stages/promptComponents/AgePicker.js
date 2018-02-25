@@ -56,11 +56,15 @@ class AgePicker extends Component {
     const checkBoxes = this.createCheckboxes();
     return (
       <div className = 'container'>
+        <div className = 'picker-header'>
+          <h2>Please select the age group(s):</h2>
+        </div>
         <div className = 'row'>
           <div className = 'col-sm-12'>
-
             <form onSubmit = {this.handleFormSubmit}>
+              <div className="checkbox-area">
               {checkBoxes}
+              </div>
               <button onClick={this.submitAges}>Next</button>
             </form>
           </div>

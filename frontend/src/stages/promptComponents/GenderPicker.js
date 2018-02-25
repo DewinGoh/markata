@@ -48,6 +48,9 @@ class GenderPicker extends Component {
     const checkBoxes = this.createCheckboxes();
     return (
       <div className = 'container'>
+      <div className = 'picker-header'>
+        <h2>Please select the gender:</h2>
+      </div>
         <div className = 'row'>
           <div className = 'col-sm-12'>
 

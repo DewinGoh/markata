@@ -36,6 +36,9 @@ class DayPicker extends React.Component {
   render() {
     return (
       <div className="outer">
+        <div className = 'picker-header'>
+          <h2>Please select the day(s):</h2>
+        </div>
         <div className="inner">
           <div className="cal_container">
             <Calendar onChange={this.changeFirst} value={this.state.first}/>

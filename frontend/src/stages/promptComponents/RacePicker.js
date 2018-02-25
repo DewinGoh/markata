@@ -51,6 +51,9 @@ class RacePicker extends Component {
     const checkBoxes = this.createCheckboxes();
     return (
       <div className = 'container'>
+        <div className = 'picker-header'>
+          <h2>Please select the race groups(s):</h2>
+        </div>
         <div className = 'row'>
           <div className = 'col-sm-12'>
 
